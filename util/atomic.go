@@ -11,6 +11,7 @@ func (b *AtomicBool) CompareAndSet(old, new bool) bool {
 	if old == new {
 		return true
 	}
+
 	var oldInt, newInt int32
 	if old {
 		oldInt = 1
